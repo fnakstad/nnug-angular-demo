@@ -2,10 +2,11 @@
   "name": "nnug-angular-demo",
   "version": "0.0.0",
   "dependencies": {
-      "express": "~3.2.5"
+    "express": "~3.2.5",
+    "underscore": "~1.4.4",
+    "Faker": "~0.5.8"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=0.8.0"
   }

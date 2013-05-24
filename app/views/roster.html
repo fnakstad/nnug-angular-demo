@@ -1,0 +1,36 @@
+<div>
+    <div class="span8">
+        <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+            Previous
+        </button>
+        {{currentPage+1}}/{{numberOfPages()}}
+        <button ng-disabled="currentPage >= kitties.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+            Next
+        </button>
+    </div>
+
+    <ul class="unstyled">
+        <li ng-repeat="kitty in kitties | startFrom:currentPage*pageSize | limitTo:pageSize" class="kittyProfile">
+
+            <div class="span8 well">
+                <div class="row">
+                    <div class="span2"><a href="http://critterapp.pagodabox.com/others/admin" class="thumbnail"><img ng-src="{{ kitty.filename }}" alt="{{ kitty.name }}"></a></div>
+                    <div class="span6">
+                        <h1>{{ kitty.name }}</strong></h1>
+                        <span>Upvotes: {{ kitty.upvotes }}</span>
+                        <span>Downvotes: {{ kitty.downvotes }}</span>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <ul style="float:right">
+                        <li ng-repeat="comment in kitty.comments">
+                            {{ comment }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+</div>
