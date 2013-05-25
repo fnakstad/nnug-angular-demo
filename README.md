@@ -6,5 +6,5 @@ This demo of Angular.js was intended to accompany a talk at NNUG in Trondheim, a
 1. [Install Node.js and npm](http://nodejs.org/)
 2. Install bower: `npm install -g bower`
 3. Open a shell and navigate to the project root
-4. Run `bower install`, then `npm install` to get dependencies
+4. Run `npm install` and `bower install` to get dependencies
 5. Start up the server with `node server.js`
