@@ -29,16 +29,6 @@ angular.module('kittyBattle', ['ui.bootstrap']).config(function ($routeProvider,
         }, 500);
     });
 
-// Paging
-angular.module('kittyBattle').filter('startFrom', function() {
-    return function(input, start) {
-        if(input) {
-            start = +start; //parse to int
-            return input.slice(start);
-        }
-    }
-});
-
 
 angular.module('kittyBattle').directive('activeLink', ['$location', function(location) {
     return {

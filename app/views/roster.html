@@ -1,12 +1,12 @@
 <div>
 
     <div class="row span8">
-        <pagination num-pages="noOfPages" current-page="currentPage"></pagination>
+        <input type="text" placeholder="Search..." ng-model="searchTerm" />
     </div>
 
     <div class="row">
         <ul class="unstyled">
-            <li ng-repeat="kitty in kitties | startFrom: currentPage * pageSize | limitTo: pageSize"
+            <li ng-repeat="kitty in kitties | filter: searchTerm"
                 class="kittyProfile">
 
                 <div class="span8 well">
@@ -23,13 +23,13 @@
                         </div>
 
                     </div>
-                    <div class="row">
+                    <!--div class="row">
                         <ul style="float:right">
                             <li ng-repeat="comment in kitty.comments">
                                 {{ comment }}
                             </li>
                         </ul>
-                    </div>
+                    </div-->
                 </div>
 
             </li>
