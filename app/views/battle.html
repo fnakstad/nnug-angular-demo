@@ -1,5 +1,17 @@
+<div ng-show="loading" style="font-size: 56px;" ng-animate=" 'custom' ">
+    Fetching kitties...
+</div>
 
-
-<div>
-
+<div ng-hide="loading" class="row">
+    <div class="contenderImageWrap" ng-click="vote(contenderOne, contenderTwo)">
+        <img ng-src="{{ contenderOne.filename }}" />
+        <span class="contenderHeaderLeft">{{ contenderOne.name }}</span>
+    </div>
+    <div style="text-align: center;font-family: 'Special Elite', cursive;font-size: 6rem;display:inline;">
+        <span style="line-height: 6rem">vs.</span>
+    </div>
+    <div class="contenderImageWrap" ng-click="vote(contenderTwo, contenderOne)">
+        <img ng-src="{{ contenderTwo.filename }}" />
+        <span class="contenderHeaderRight">{{ contenderTwo.name }}</span>
+    </div>
 </div>

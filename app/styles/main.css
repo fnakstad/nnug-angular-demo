@@ -1,5 +1,6 @@
 body {
     font-family: 'Josefin Slab', serif;
+    font-size: 1em;
 }
 
 #logo {
@@ -9,4 +10,82 @@ body {
 
 .kittyProfile > img {
     width: 300px;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.contenderImageWrap {
+    position: relative;
+    display: inline-block;
+    font-family: 'Special Elite', cursive;
+    font-size: 3rem;
+}
+
+.contenderImageWrap img {
+    height: 300px;
+    box-shadow: -2px 2px 12px 0px #000;
+    border-radius: 15px;
+}
+
+.contenderHeaderLeft,
+.contenderHeaderRight {
+    position: absolute;
+    top: 75%;
+    color:white;
+}
+
+.contenderHeaderLeft {
+    right:2%;
+}
+
+.contenderHeaderRight {
+    left:2%;
+}
+
+/* Animations */
+.custom-enter {
+    -webkit-transition: 0.8s linear all;
+    -moz-transition: 0.8s linear all;
+    -o-transition: 0.8s linear all;
+    transition: 0.8s linear all;
+    position:relative;
+}
+
+.custom-enter {
+    opacity:0;
+}
+.custom-enter.custom-enter-active {
+    opacity:1;
+}
+
+/*.custom-leave {
+    opacity:1;
+    left:0%;
+}
+.custom-leave.custom-leave-active {
+    opacity:0;
+    left: 150%;
+}
+
+.custom-move {
+    opacity:0.5;
+}
+.custom-move.custom-move-active {
+    opacity:1;
+} */
+
+.fade-leave {
+    -webkit-transition: 0.8s linear all;
+    -moz-transition: 0.8s linear all;
+    -o-transition: 0.8s linear all;
+    transition: 0.8s linear all;
+}
+
+.fade-leave {
+    opacity:1;
+}
+.fade-leave.custom-enter-active {
+    opacity:0;
 }

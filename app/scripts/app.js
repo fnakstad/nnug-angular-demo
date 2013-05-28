@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('kittyBattle', []).config(function ($routeProvider, $locationProvider) {
+angular.module('kittyBattle', ['ui.bootstrap']).config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
         templateUrl: 'views/battle.html',
@@ -19,13 +19,23 @@ angular.module('kittyBattle', []).config(function ($routeProvider, $locationProv
         });
 
     //$locationProvider.html5Mode(true);
-  });
+  }).run(function($rootScope) {
+        $rootScope.initialPageLoad = true;
+        console.log('hey');
+        setTimeout(function() {
+            console.log('done');
+            $rootScope.initialPageLoad = false;
+            if(!$rootScope.$$phase) $rootScope.$apply();
+        }, 500);
+    });
 
 // Paging
 angular.module('kittyBattle').filter('startFrom', function() {
     return function(input, start) {
-        start = +start; //parse to int
-        return input.slice(start);
+        if(input) {
+            start = +start; //parse to int
+            return input.slice(start);
+        }
     }
 });
 
