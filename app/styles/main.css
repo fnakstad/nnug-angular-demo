@@ -24,9 +24,13 @@ body {
 }
 
 .contenderImageWrap img {
-    height: 300px;
-    box-shadow: -2px 2px 12px 0px #000;
+    width: 500px;
+    box-shadow: 0px 0px 15px 0px #000;
     border-radius: 15px;
+}
+
+.contenderImageWrap img:hover {
+    box-shadow: 0px 0px 22px 1px #000;
 }
 
 .contenderHeaderLeft,
