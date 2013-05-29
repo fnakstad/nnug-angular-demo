@@ -48,6 +48,11 @@ body {
     left:2%;
 }
 
+.comments {
+    list-style-type: none;
+    margin: 10px 0px;
+}
+
 /* Animations */
 .custom-enter {
     -webkit-transition: 0.8s linear all;

@@ -1,6 +1,6 @@
 <div>
 
-    <div class="row span8">
+    <div class="row span8" style="text-align:center;">
         <input type="text" placeholder="Search..." ng-model="searchTerm" />
     </div>
 
@@ -11,25 +11,26 @@
 
                 <div class="span8 well">
                     <div class="row">
-                        <div class="span2">
+                        <div class="span4">
                             <img ng-src="{{ kitty.filename }}"
                                  alt="{{ kitty.name }}"
-                                 tooltip="meow...">
+                                 tooltip="meow..."
+                                 style="width:100%;">
                         </div>
-                        <div class="span6">
-                            <h1>{{ kitty.name }}</strong></h1>
-                            <span>Upvotes: {{ kitty.upvotes }}</span>
-                            <span>Downvotes: {{ kitty.downvotes }}</span>
+                        <div class="span4">
+                            <div style="display:inline-block;">
+                                <i class="icon-thumbs-up" style="color:green;"></i> {{ kitty.upvotes }}
+                                <br />
+                                <i class="icon-thumbs-down" style="color:red;"></i> {{ kitty.downvotes }}
+                            </div>
+                            <h1 style="display:inline;">{{ kitty.name }}</strong></h1>
+                            <ul class="comments">
+                                <li ng-repeat="comment in kitty.comments">
+                                    {{ comment }}
+                                </li>
+                            </ul>
                         </div>
-
                     </div>
-                    <!--div class="row">
-                        <ul style="float:right">
-                            <li ng-repeat="comment in kitty.comments">
-                                {{ comment }}
-                            </li>
-                        </ul>
-                    </div-->
                 </div>
 
             </li>
